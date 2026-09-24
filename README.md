@@ -7,48 +7,48 @@ Credit card fraud is a major challenge for financial institutions and consumers.
 It combines exploratory data analysis, dynamic model training, automated metric tracking, and an interpretable fraud prediction simulator into an interactive application powered by a FastAPI backend and a Streamlit frontend.
 
 ## System Capabilities
-
-FraudLens
-
-│
-
-├── Data & EDA
-
-├── Model Training
-
-│   ├── Logistic Regression
-
-│   ├── Random Forest
-
-│   ├── XGBoost
-
-│   ├── GMM
-
-│   └── Autoencoder
-
-│
-
-├── Evaluation
-
-│   ├── Precision / Recall / F1
-
-│   ├── ROC-AUC
-
-│   └── PR-AUC (Average Precision)
-
-│
-
-├── Explainability
-
-│   └── SHAP
-
-│
-
-└── Application
-
-    ├── FastAPI (Backend API)
-
-    └── Streamlit (Frontend Dashboard)
+    
+    FraudLens
+    
+    │
+    
+    ├── Data & EDA
+    
+    ├── Model Training
+    
+    │   ├── Logistic Regression
+    
+    │   ├── Random Forest
+    
+    │   ├── XGBoost
+    
+    │   ├── GMM
+    
+    │   └── Autoencoder
+    
+    │
+    
+    ├── Evaluation
+    
+    │   ├── Precision / Recall / F1
+    
+    │   ├── ROC-AUC
+    
+    │   └── PR-AUC (Average Precision)
+    
+    │
+    
+    ├── Explainability
+    
+    │   └── SHAP
+    
+    │
+    
+    └── Application
+    
+        ├── FastAPI (Backend API)
+    
+        └── Streamlit (Frontend Dashboard)
 
 
 ## Methodology
