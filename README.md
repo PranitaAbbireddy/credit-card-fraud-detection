@@ -11,25 +11,45 @@ It combines exploratory data analysis, dynamic model training, automated metric 
 FraudLens
 
 │
+
 ├── Data & EDA
+
 ├── Model Training
+
 │   ├── Logistic Regression
+
 │   ├── Random Forest
+
 │   ├── XGBoost
+
 │   ├── GMM
+
 │   └── Autoencoder
+
 │
+
 ├── Evaluation
+
 │   ├── Precision / Recall / F1
+
 │   ├── ROC-AUC
+
 │   └── PR-AUC (Average Precision)
+
 │
+
 ├── Explainability
+
 │   └── SHAP
+
 │
+
 └── Application
+
     ├── FastAPI (Backend API)
+
     └── Streamlit (Frontend Dashboard)
+
 
 ## Methodology
 
