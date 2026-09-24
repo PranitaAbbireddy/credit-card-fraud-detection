@@ -1,0 +1,129 @@
+# ============================================
+# Python
+# ============================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env/
+
+# Python packaging
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+*.whl
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+
+# ============================================
+# Environment & Secrets
+# ============================================
+
+.env
+.env.*
+!.env.example
+
+# Local configuration
+*.local
+
+
+# ============================================
+# IDE / Editors
+# ============================================
+
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# ============================================
+# Logs
+# ============================================
+
+*.log
+logs/
+
+
+# ============================================
+# Frontend - Node
+# ============================================
+
+frontend/node_modules/
+frontend/.next/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/coverage/
+
+# Frontend environment files
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+
+# ============================================
+# Backend
+# ============================================
+
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.coverage
+
+
+# ============================================
+# Data / ML artifacts
+# ============================================
+
+# Large datasets
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+
+# ML models / serialized objects
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.keras
+*.onnx
+
+# Generated reports / outputs
+outputs/
+artifacts/
+models/
+
+
+# ============================================
+# Temporary files
+# ============================================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
