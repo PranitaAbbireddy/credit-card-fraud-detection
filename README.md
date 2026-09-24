@@ -151,3 +151,54 @@ FraudLens follows a decoupled frontend/backend architecture that separates the i
                          │ • Metrics Visualization  │
                          │ • SHAP Explanations      │
                          └──────────────────────────┘
+```
+## Architecture Flow
+- The credit card transaction dataset is loaded and validated.
+- Data preprocessing and train/validation/test splitting are handled by the backend.
+- Supervised and unsupervised models are trained through the FastAPI backend.
+- Models are evaluated using classification and anomaly-detection metrics.
+- Validation data is used to select anomaly thresholds for GMM and the Autoencoder.
+- SHAP is used to provide model prediction explanations.
+- The Streamlit dashboard communicates with the FastAPI backend to display results and interact with trained models.
+
+
+## Dataset
+
+FraudLens uses the **Credit Card Fraud Detection** dataset provided by the Machine Learning Group of ULB and hosted on Kaggle.
+
+### Dataset Source
+
+**Kaggle:** [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
+
+The dataset contains **284,807 transactions** made by European cardholders during two days in September 2013. Only **492 transactions are fraudulent**, representing approximately **0.172%** of all transactions. The dataset is therefore highly imbalanced. :contentReference[oaicite:1]{index=1}
+
+### Features
+
+| Feature | Description |
+|---|---|
+| `Time` | Seconds elapsed between each transaction and the first transaction |
+| `V1` – `V28` | PCA-transformed numerical features |
+| `Amount` | Transaction amount |
+| `Class` | Target label: `0` = legitimate, `1` = fraud |
+
+The original transaction features are not publicly provided because of confidentiality constraints. `V1`–`V28` are principal components generated through PCA, while `Time` and `Amount` remain in their original form. :contentReference[oaicite:2]{index=2}
+
+### Dataset Characteristics
+
+- **Total transactions:** 284,807
+- **Fraudulent transactions:** 492
+- **Legitimate transactions:** 284,315
+- **Fraud rate:** 0.172%
+- **Number of columns:** 31
+- **Target variable:** `Class`
+- **File:** `creditcard.csv`
+
+Because of the extreme class imbalance, accuracy alone is not an appropriate measure of model performance. Precision, Recall, F1 Score, ROC-AUC, and particularly PR-AUC are used for evaluation. :contentReference[oaicite:3]{index=3}
+
+## Conclusion
+
+FraudLens evaluates supervised and unsupervised machine learning approaches for credit card fraud detection under severe class imbalance. The project compares Logistic Regression, Random Forest, XGBoost, Gaussian Mixture Models, and a PyTorch-based Autoencoder using precision, recall, F1 score, ROC-AUC, and PR-AUC.
+
+The system combines model evaluation with validation-based anomaly threshold selection and SHAP-based explainability. A decoupled FastAPI and Streamlit architecture provides an API-driven inference layer and an interactive interface for exploring the data, comparing models, and analyzing individual predictions.
+
+Overall, the project demonstrates an end-to-end machine learning workflow covering data preprocessing, model development, anomaly detection, evaluation, explainability, API-based inference, and interactive visualization.
